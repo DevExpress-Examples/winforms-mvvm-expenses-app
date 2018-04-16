@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7AE86FF-3BDC-43E1-A33A-63A6970D3670}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVVMExpenses</RootNamespace>
+    <AssemblyName>MVVMExpenses</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>sqlite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>sqlite\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DataModel\DbExceptions.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbConnectionFactory.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbExceptionsConverter.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbRepository.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbUnitOfWorkFactory.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\InstantFeedbackSource.cs" />
+    <Compile Include="Common\DataModel\EntityState.cs" />
+    <Compile Include="Common\DataModel\IReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\IRepository.cs" />
+    <Compile Include="Common\DataModel\IUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\UnitOfWorkBase.cs" />
+    <Compile Include="Common\Utils\DbExtensions.cs" />
+    <Compile Include="Common\Utils\ExpressionHelper.cs" />
+    <Compile Include="Common\ViewModel\CollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\DocumentsViewModel.cs" />
+    <Compile Include="Common\ViewModel\EntitiesViewModel.cs" />
+    <Compile Include="Common\ViewModel\InstantFeedbackCollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\ISingleObjectViewModel.cs" />
+    <Compile Include="Common\ViewModel\LayoutSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LayoutSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewModel\LookUpEntitiesViewModel.cs" />
+    <Compile Include="Common\ViewModel\Messages.cs" />
+    <Compile Include="Common\ViewModel\PeekCollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\SingleObjectViewModel.cs" />
+    <Compile Include="Common\ViewModel\ViewModelLogicalLayoutHelper.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\CredentialsSource.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MyDbContextViewModel.partial.cs" />
+    <Compile Include="Views\Account\AccountsEditFormView.cs" />
+    <Compile Include="Views\Account\AccountsEditFormView.Designer.cs">
+      <DependentUpon>AccountsEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\AccountsView.cs" />
+    <Compile Include="Views\Account\AccountsView.Designer.cs">
+      <DependentUpon>AccountsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Category\CategoriesEditFormView.cs" />
+    <Compile Include="Views\Category\CategoriesEditFormView.Designer.cs">
+      <DependentUpon>CategoriesEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Category\CategoriesView.cs" />
+    <Compile Include="Views\Category\CategoriesView.Designer.cs">
+      <DependentUpon>CategoriesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Transaction\TransactionsEditFormView.cs" />
+    <Compile Include="Views\Transaction\TransactionsEditFormView.Designer.cs">
+      <DependentUpon>TransactionsEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Transaction\TransactionsView.cs" />
+    <Compile Include="Views\Transaction\TransactionsView.Designer.cs">
+      <DependentUpon>TransactionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DataDirectoryHelper.cs" />
+    <Compile Include="DataBase\DbContext.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\MyDbContextDataModel\IMyDbContextUnitOfWork.cs" />
+    <Compile Include="Models\MyDbContextDataModel\MyDbContextUnitOfWork.cs" />
+    <Compile Include="Models\MyDbContextDataModel\UnitOfWorkSource.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Account\AccountCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Account\AccountViewModel.cs" />
+    <Compile Include="ViewModels\Category\CategoryCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Category\CategoryViewModel.cs" />
+    <Compile Include="ViewModels\MyDbContextViewModel.cs" />
+    <Compile Include="ViewModels\Transaction\TransactionCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Transaction\TransactionViewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\CommonResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\AccountsEditFormView.resx">
+      <DependentUpon>AccountsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\AccountsView.resx">
+      <DependentUpon>AccountsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Category\CategoriesEditFormView.resx">
+      <DependentUpon>CategoriesEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Category\CategoriesView.resx">
+      <DependentUpon>CategoriesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Transaction\TransactionsEditFormView.resx">
+      <DependentUpon>TransactionsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Transaction\TransactionsView.resx">
+      <DependentUpon>TransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Common\ViewModel\LayoutSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LayoutSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Expenses.sqlite3" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MVVMExpenses.DataModels.Account.datasource" />
+    <None Include="Properties\DataSources\MVVMExpenses.DataModels.Category.datasource" />
+    <None Include="Properties\DataSources\MVVMExpenses.DataModels.Transaction.datasource" />
+    <None Include="Properties\DataSources\MVVMExpenses.Models.SampleUserList.datasource" />
+    <None Include="Properties\DataSources\MVVMExpenses.Models.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
