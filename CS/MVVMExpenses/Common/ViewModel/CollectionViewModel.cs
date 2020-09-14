@@ -199,7 +199,7 @@ namespace MVVMExpenses.Common.ViewModel {
         /// </summary>
         /// <param name="projectionEntity">An entity to edit.</param>
         public bool CanEdit(TProjection projectionEntity) {
-            return projectionEntity != null && !IsLoading && Selection.Count() == 1;
+            return projectionEntity != null && !IsLoading && Selection != null && Selection.Count() == 1;
         }
 
         /// <summary>
