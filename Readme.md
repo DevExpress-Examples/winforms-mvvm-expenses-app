@@ -6,8 +6,22 @@
 # MvvmExpenses Sample Application
 
 
-This is a sample application, created in MVVM Tutorials section. Follow <a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument114101">this link</a> to see these lessons.<br /><br />To log in, use one of the following credentials:<br />Administrator - admin<br />John - qwerty<br />Mary - 12345<br />Guest - <em>(no password set)</em>
+**MVVM Expenses** is a sample money management application built with the DevExpress MVVM Framework. The application has three modules, each bound to a related data source: "Accounts", "Categories", and "Transactions".
 
-<br/>
+* *Accounts* displays a list of user bank accounts.
+* *Categories* stores a list of transaction categories.
+* *Transactions* stores a list of all deposit and withdrawal operations. Each transaction references a specific Account and Category by their IDs.
+
+To log in, use one of the following credentials:
+
+* Administrator - admin
+* John - qwerty
+* Mary - 12345
+* Guest - *(no password set)*
+
+## Documentation
+
+[MVVM Expenses Tutorial](https://documentation.devexpress.com/#WindowsForms/CustomDocument114101)
+[DevExpress MVVM Framework (WinForms)](https://docs.devexpress.com/WindowsForms/113955/build-an-application/winforms-mvvm)
 
 
